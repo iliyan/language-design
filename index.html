@@ -28,8 +28,11 @@
 					<script type="text/template">
 #### A Tale of Two Asyncs: Open Source Language Design in Rust and Node.JS
 [![Link to the video]((https://youtu.be/aGJTXdXQN2o))]
+
 Ashley Williams (@ag_dubs)
+
 Rust Core Team, Mozilla 
+
 [video] ![picture from strangeloop][headshot]
 
 [headshot]: https://s3.amazonaws.com/strangeloop/uploadedimgs/prod/R7_zKTwekfFEXkCS2BjNXQ_large.jpg "Ashley Williams (@ag_dubs)"
@@ -71,21 +74,23 @@ The talk contains also an interesting tour of topics like:
 				</section>
 				<section data-markdown>
 					<script type="text/template">
-					
 #### Influences of Philosophy
 
 Genealogy as a tool of analyzing the development of languages and features
+  > The point of genealogical analysis is to show that given system of thought was 
+  > the result of contingent turns of history, not the outcome of rationally 
+  > irreversible trends. --Michel Foucaut
 
-> The point of genealogical analysis is to show that given system of thought was the result of contingent turns of history, not the outcome of rationally irreversible trends. --Michel Foucaut
+Programming languages are often viewed them as somehting present and existing, withot history.
 
-Programming languages are deeply complex historical artefacts yet we often view them as somehting present and existing, withot history
-  - Historical artefacts, not axiomatically inevitable constucts.
+But looking closer we find a deeply complex historical artefacts, not at all axiomatically inevitable constucts.
 
 					</script>
 				</section>
 				<section data-markdown>
 					<script type="text/template">
 #### Which is the Best Tool for the Job? How to choose it?
+
   - What do programming languages want to be?
   - Programming paradigms 
     - An approach to programming
@@ -98,6 +103,7 @@ Programming languages are deeply complex historical artefacts yet we often view 
 				<section data-markdown>
 					<script type="text/template">
 #### What type of tool does Node (JS) want to be?
+
   - Ryan Dahl and his decision to change the async IO paradigm, and take advantage of the event loop
   - Node is based on JS, which was already designed to run with an event loop (primary paradigm)
   - Motivation: C10K problem, thread concurrency is leaky abstraction, need for first class status of async processing
@@ -109,6 +115,7 @@ Programming languages are deeply complex historical artefacts yet we often view 
 				<section data-markdown>
 					<script type="text/template">
 #### What type of language does JS want to be?
+  
   - JS genesis story is ... heroic. Hard to find a succinct design goal statement
   - JS was intended as a "glue" language to provide interractivity for web pages
   - JS wants to have ".. syntax relaxed to enable it to be used as an easy-to-use script language.."
@@ -118,6 +125,7 @@ Programming languages are deeply complex historical artefacts yet we often view 
 				<section data-markdown>
 					<script type="text/template">
 #### What type of language does Rust want to be?
+
 Rust whas designed with a clear and specific goals in mind (originally, to replace C++ at Mozzila)
 
 Rust is "systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety"
@@ -126,6 +134,10 @@ Rust is "systems programming language that runs blazingly fast, prevents segfaul
 
 Comunity organized into distinct "domain working groups": networking, webassembly, cli apps, embedded
 
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
 Rust wants to be "a first class server-side language"
 
 Async features were not a "foundational" value, memoory safety was
@@ -140,7 +152,7 @@ Memory safety (and consumption) is the biggest problem for async applications.
 					<script type="text/template">
 #### Should Rust be used for web services?
 
-#### Productivity as a developer experience
+Productivity as a developer experience
 
 There are different levele of feature adoption in the developer population.  Because features and people are "historical" - Terry Tao stages of learning (pre-rigorous (survival), rigorous (inquiry), post-rigorous (sophistication))
 
