@@ -26,10 +26,130 @@
 			<div class="slides">
 				<section data-markdown>
 					<script type="text/template">
-## Markdown support
+## Node and Rust
+### A TALE OF TWO ASYNCS: OPEN SOURCE LANGUAGE DESIGN IN RUST AND NODE.JS
+#### By Ashley Williams (@ag_dubs), Rust Core Team, Mozilla 
+#### [![Link to the video]((https://youtu.be/aGJTXdXQN2o))][video] ![picture from strangeloop][headshot]
 
-Write content using inline or external Markdown.
-Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+[headshot]: https://s3.amazonaws.com/strangeloop/uploadedimgs/prod/R7_zKTwekfFEXkCS2BjNXQ_large.jpg "Ashley Williams (@ag_dubs)"
+[video]: https://youtu.be/aGJTXdXQN2o "Youtube Video of the Talk"
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+### Why Cant Programming Languages Just Pick One Approach and Stick with it?
+
+Using the development of async features in Node and Rust, the author explores why there are so many and often barely compatible approaches to solving the same problem. The point of view she takes is that what determines the solution is not only the problem being solved and the science providing the possibilities. 
+
+In her view, there are is a multitude of factors at play, including technical constraints, historical context, and social forces. To build her analytical framework Ashley borrows from her interest in philosophy, specifically genealogical analysis. 
+
+She contrasts and compares the development of async features in both Node and Rust, in the context of their respective communities, including presonalities, governance structures, and history.
+
+The talk also contains an interesting dive in topis like open-source governance process of Rust, the genesis of some other Rust features, like error checking, and contrasting them with author's extensive experience with Node and NPM.
+
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+					
+### Influences of Philosophy
+
+Genealogy as a tool of analyzing the development of languages and features
+
+> The point of genealogical analysis is to show that given system of thought was the result of contingent turns of history, not the outcome of rationally irreversible trends. --Michel Foucaut
+
+Programming languages are deeply complex historical artefacts yet we often view them as somehting present and existing, withot history
+  - Historical artefacts, not axiomatically inevitable constucts.
+
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+### Which is the Best Tool for the Job? How to choose it?
+  - What do programming languages want to be?
+  - Programming paradigms 
+    - An approach to programming
+    - Based on a mathematical theory, or set of concepts
+    - Tailored for certain kinds of problems
+    > The pradigm paradox: more is not better, just different, --Peter Van Roy
+					
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+### What type of tool does Node (JS) want to be?
+  - Ryan Dahl and his decision to change the async IO paradigm, and take advantage of the event loop
+  - Node is based on JS, which was already designed to run with an event loop (primary paradigm)
+  - Motivation: C10K problem, thread concurrency is leaky abstraction, need for first class status of async processing
+  - Design goals somewhat hard to find, but clear
+  - Node wants to ... "provide a purely evented, non-blocking infrastructure to script highly concurrent programs."
+
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+### What type of language does JS want to be?
+  - JS genesis story is ... heroic. Hard to find a succinct design goal statement
+  - JS was intended as a "glue" language to provide interractivity for web pages
+  - JS wants to have ".. syntax relaxed to enable it to be used as an easy-to-use script language.."
+
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+### What type of language does Rust want to be?
+Rust whas designed with a clear and specific goals in mind (originally, to replace C++ at Mozzila)
+
+Rust is "systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety"
+  - async based on a libray, uses futures, influenced by Node
+  - should you write a web service in a systems language?
+
+Comunity organized into distinct "domain working groups": networking, webassembly, cli apps, embedded
+
+Rust wants to be "a first class server-side language"
+
+Async features were not a "foundational" value, memoory safety was
+
+Memory safety (and consumption) is the biggest problem for async applications.
+  - Rust futures are a library
+  - There's no implicit event loop
+
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+### Should Rust be used for web services?
+
+### Productivity as a developer experience
+
+There are different levele of feature adoption in the developer population.  Because features and people are "historical" - Terry Tao stages of learning (pre-rigorous (survival), rigorous (inquiry), post-rigorous (sophistication))
+
+Feature evolution is part of Rust "way"
+  > Loud, explicit syntax for new features. Terse notation for established features -- Stroustrup's rule, Dave Herman
+  
+Examples include error handling: from 'match ...',  to 'try! ..', to just '?'
+
+
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
 					</script>
 				</section>
 			</div>
